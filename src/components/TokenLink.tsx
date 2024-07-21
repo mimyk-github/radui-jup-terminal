@@ -10,7 +10,7 @@ const TokenLink: React.FC<{ tokenInfo: TokenInfo }> = (({ tokenInfo }) => {
     <a
       target="_blank"
       rel="noreferrer"
-      className="flex items-center bg-black/25 text-white/75 px-2 py-0.5 space-x-1 rounded cursor-pointer"
+      className="flex items-center bg-black/25 text-v3-light/75 px-2 py-0.5 space-x-1 rounded cursor-pointer"
       href={getTokenExplorer(tokenInfo.address)}
       onClick={(e) => e.stopPropagation()}
     >

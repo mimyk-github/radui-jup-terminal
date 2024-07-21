@@ -26,17 +26,17 @@ const Header: React.FC<{ setIsWalletModalOpen(toggle: boolean): void }> = ({ set
   }, [form.slippageBps]);
 
   return (
-    <div className="mt-2 h-7 pl-3 pr-2">
-      <div className="w-full flex items-center justify-between ">
+    <div className=" h-12 border-v3-primary border-b-2">
+      <div className="pl-2 w-full flex items-center justify-between ">
         <a href={jupiterDirectLink} target={'_blank'} rel="noreferrer noopener" className="flex items-center space-x-2">
           <JupiterLogo width={24} height={24} />
-          <span className="font-bold text-sm text-white">Jupiter</span>
+          <span className="font-bold text-sm text-v3-primary">Jupiter</span>
         </a>
 
-        <div className="flex space-x-1 items-center">
+        <div className="flex items-center">
           <button
             type="button"
-            className="p-2 h-7 w-7 flex items-center justify-center border rounded-full border-white/10 bg-black/10 text-white/30 fill-current"
+            className="h-12 w-10 flex items-center justify-center border-v3-primary border-r-2 border-l-2 text-v3-primary fill-current"
             onClick={refresh}
           >
             <RefreshSVG />
@@ -44,11 +44,11 @@ const Header: React.FC<{ setIsWalletModalOpen(toggle: boolean): void }> = ({ set
 
           <button
             type="button"
-            className="p-2 h-7 space-x-1 flex items-center justify-center border rounded-2xl border-white/10 bg-black/10 text-white/30 fill-current"
+            className="px-2 h-12 flex items-center justify-center border-v3-primary border-r-2 text-v3-primary fill-current"
             onClick={() => setShowSlippageSetting(true)}
           >
             <SettingsSVG />
-            <span suppressHydrationWarning className="text-xs text-white-30">
+            <span suppressHydrationWarning className="text-xs text-v3-primary-30">
               {slippageText}%
             </span>
           </button>

@@ -15,7 +15,7 @@ const UnknownTokenModal: React.FC<{
   const { getTokenExplorer } = usePreferredExplorer();
 
   return (
-    <div className="p-6 rounded-lg bg-v3-modal text-white max-h-[80vh] overflow-auto">
+    <div className="p-6 bg-v3-dark text-v3-light max-h-[80vh] overflow-auto">
       {/* Token */}
       <div className="flex justify-between">
         <div />
@@ -30,7 +30,7 @@ const UnknownTokenModal: React.FC<{
                 href={getTokenExplorer(tokenInfo.address, 'mainnet-beta')}
                 target="_blank"
                 rel="nofollow noreferrer"
-                className="mt-1 flex justify-center items-center rounded-lg py-1 px-2 bg-black-10 bg-black/30 cursor-pointer text-white/40 fill-current"
+                className="mt-1 flex justify-center items-center rounded-lg py-1 px-2 bg-black-10 bg-black/30 cursor-pointer text-v3-light/40 fill-current"
               >
                 <span className="mr-2 text-xxs">{shortenAddress(tokenInfo.address)}</span>
                 <ExternalIcon />
@@ -40,13 +40,13 @@ const UnknownTokenModal: React.FC<{
         </div>
 
         {/* Close Icon */}
-        <div className="mt-2 fill-current text-white-35 cursor-pointer" onClick={onClickReject}>
+        <div className="mt-2 fill-current text-v3-light-35 cursor-pointer" onClick={onClickReject}>
           <CloseIcon width={16} height={16} />
         </div>
       </div>
 
       {/* Info */}
-      <div className="mt-6 text-sm text-white ">
+      <div className="mt-6 text-sm text-v3-light ">
         <div>
           {tokensInfo.length > 1
             ? (
@@ -61,7 +61,7 @@ const UnknownTokenModal: React.FC<{
           href={UNKNOWN_TOKEN_LINK}
           target="_blank"
           rel="noreferrer"
-          className="mt-4 flex justify-center items-center text-white/40"
+          className="mt-4 flex justify-center items-center text-v3-light/40"
         >
           <span>
             Learn More
@@ -77,7 +77,7 @@ const UnknownTokenModal: React.FC<{
       <div className="w-full space-y-3 lg:space-y-0 lg:space-x-3 mt-7">
         <button
           type="button"
-          className="bg-black text-white rounded-lg w-full py-2.5 px-6 font-semibold text-sm"
+          className="bg-black text-v3-light rounded-lg w-full py-2.5 px-6 font-semibold text-sm"
           onClick={onClickAccept}
         >
           <span>{'Confirm Selection'}</span>

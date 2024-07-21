@@ -207,12 +207,12 @@ const SwapSettingsModal: React.FC<{ closeModal: () => void }> = ({ closeModal })
   );
 
   return (
-    <div className={classNames('w-full rounded-xl flex flex-col bg-v3-modal text-white shadow-xl max-h-[90%]')}>
+    <div className={classNames('w-full rounded-xl flex flex-col bg-v3-dark text-v3-light shadow-xl max-h-[90%]')}>
       <div className="flex justify-between items-center p-4 border-b border-white/10">
         <div className="text-sm font-semibold">
           <span>Swap Settings</span>
         </div>
-        <div className="text-white fill-current cursor-pointer" onClick={() => closeModal()}>
+        <div className="text-v3-light fill-current cursor-pointer" onClick={() => closeModal()}>
           <CloseIcon width={14} height={14} />
         </div>
       </div>
@@ -230,19 +230,19 @@ const SwapSettingsModal: React.FC<{ closeModal: () => void }> = ({ closeModal })
                 variant="dark"
                 className="!left-0 !top-16 w-[50%]"
                 content={
-                  <span className="flex rounded-lg text-xs text-white/75">
+                  <span className="flex rounded-lg text-xs text-v3-light/75">
                     The priority fee is paid to the Solana network. This additional fee helps boost how a transaction is
                     prioritized against others, resulting in faster transaction execution times.
                   </span>
                 }
               >
-                <div className="flex ml-2.5 items-center text-white-35 fill-current">
+                <div className="flex ml-2.5 items-center text-v3-light-35 fill-current">
                   <InfoIconSVG width={12} height={12} />
                 </div>
               </Tooltip>
             </div>
 
-            <p className="text-xs text-white/50 font-[500] mt-2">
+            <p className="text-xs text-v3-light/50 font-[500] mt-2">
               These fees apply across Jupiter’s entire product suite, such as Swap, Perps, DCA, Limit Order
             </p>
 
@@ -320,7 +320,7 @@ const SwapSettingsModal: React.FC<{ closeModal: () => void }> = ({ closeModal })
                               }}
                             >
                               <div className="whitespace-nowrap">
-                                <p className="text-sm text-white">{name}</p>
+                                <p className="text-sm text-v3-light">{name}</p>
                               </div>
                             </SwapSettingButton>
                           );
@@ -346,11 +346,11 @@ const SwapSettingsModal: React.FC<{ closeModal: () => void }> = ({ closeModal })
             <div className="mt-2">
               <div className="flex items-center justify-between mt-4">
                 {isMaxPriorityMode ? (
-                  <p className="text-sm text-white/75 font-[500]">Set Max Cap</p>
+                  <p className="text-sm text-v3-light/75 font-[500]">Set Max Cap</p>
                 ) : (
-                  <p className="text-sm text-white/75 font-[500]">Exact Fee</p>
+                  <p className="text-sm text-v3-light/75 font-[500]">Exact Fee</p>
                 )}
-                <span className="text-xxs mt-1 text-white/25 font-normal self-end">
+                <span className="text-xxs mt-1 text-v3-light/25 font-normal self-end">
                   <CoinBalanceUSD
                     tokenInfo={SOL_TOKEN_INFO}
                     amount={unsavedPriorityFee}
@@ -387,7 +387,7 @@ const SwapSettingsModal: React.FC<{ closeModal: () => void }> = ({ closeModal })
                         allowedDecimalSeparators={['.', ',']}
                         suffix=" SOL"
                         placeholder={'Enter custom value'}
-                        className={`text-left h-full w-full bg-[#1B1B1E] placeholder:text-white/25 py-4 px-5 text-sm rounded-xl ring-1 ring-white/5 text-white/50 pointer-events-all relative`}
+                        className={`text-left h-full w-full bg-[#1B1B1E] placeholder:text-v3-light/25 py-4 px-5 text-sm rounded-xl ring-1 ring-white/5 text-v3-light/50 pointer-events-all relative`}
                       />
                     );
                   }}
@@ -450,7 +450,7 @@ const SwapSettingsModal: React.FC<{ closeModal: () => void }> = ({ closeModal })
                   inputFocused.current = true;
                 }}
                 className={classNames(
-                  `flex items-center justify-between cursor-text w-[120px] !h-[42px] text-white/50 bg-[#1B1B1E] pl-2 text-sm relative`,
+                  `flex items-center justify-between cursor-text w-[120px] !h-[42px] text-v3-light/50 bg-[#1B1B1E] pl-2 text-sm relative`,
                   inputFocused.current ? 'border border-v3-primary rounded-r-xl' : '',
                 )}
               >
@@ -531,12 +531,12 @@ const SwapSettingsModal: React.FC<{ closeModal: () => void }> = ({ closeModal })
                 onClick={() => form.setValue('asLegacyTransaction', !asLegacyTransactionInput)}
               />
             </div>
-            <p className="mt-2 text-xs text-white/50">
+            <p className="mt-2 text-xs text-v3-light/50">
               Versioned Tx is a significant upgrade that allows for more advanced routings and better prices!
             </p>
 
             {wallet?.adapter ? (
-              <p className="mt-2 text-xs text-white/50">
+              <p className="mt-2 text-xs text-v3-light/50">
                 {detectedVerTxSupport
                   ? `Your wallet supports Versioned Tx. and it has been turned on by default.`
                   : `Your wallet does not support Versioned Tx.`}
@@ -559,7 +559,7 @@ const SwapSettingsModal: React.FC<{ closeModal: () => void }> = ({ closeModal })
                 </a>
               </div>
             </div>
-            <p className="mt-2 text-xs text-white/50">
+            <p className="mt-2 text-xs text-v3-light/50">
               {`The strict list contains a smaller set of validated tokens. To see all tokens, toggle "off".`}
             </p>
           </div>

@@ -8,6 +8,12 @@ module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      boxSizing: {
+        'content': 'content-box',
+      },
+      fontFamily: {
+        'default': ['Joystix', 'sans-serif'],
+      },
       colors: {
         'jupiter-input-light': '#EBEFF1',
         'jupiter-jungle-green': '#24AE8F',
@@ -15,9 +21,11 @@ module.exports = {
         warning: '#FAA63C',
 
         'v3-bg': 'rgba(28, 41, 54, 1)',
-        'v3-primary': '#c7f284',
+        'v3-primary': '#FDE185',
         'v3-modal': '#222B33',
         'v2-lily': '#E8F9FF',
+        'v3-dark': '#0F0E0C',
+        'v3-light': '#FEF8E2',
       },
       fontSize: {
         xxs: ['0.625rem', '1rem'],

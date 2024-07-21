@@ -40,7 +40,7 @@ export const WalletButton: FC<{ setIsWalletModalOpen(toggle: boolean): void }> =
           aria-label="dropdown-list"
           className={
             active
-              ? 'absolute block top-10 right-0 text-sm bg-black rounded-lg p-2 text-white dark:bg-white dark:text-black'
+              ? 'absolute block top-10 right-0 text-sm bg-black p-2 text-v3-light dark:bg-white dark:text-black'
               : 'hidden'
           }
           ref={ref}

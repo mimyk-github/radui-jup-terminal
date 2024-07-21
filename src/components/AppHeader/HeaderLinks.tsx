@@ -24,9 +24,9 @@ const HeaderLink = ({
       href={href}
       shallow
       className={classNames(
-        'flex items-center font-semibold text-white/50 hover:text-white fill-current h-[60px] px-4',
+        'flex items-center font-semibold text-v3-dark hover:text-v3-light fill-current h-[60px] px-4 border-r-2 border-v3-dark',
         {
-          'bg-v3-bg !text-v3-primary': isActive,
+          'bg-v3-dark !text-v3-primary': isActive,
         },
         className,
       )}

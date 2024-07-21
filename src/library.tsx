@@ -121,7 +121,7 @@ const RenderShell = (props: IInit) => {
   const contentClassName = useMemo(() => {
     // Default Modal
     if (!displayMode || displayMode === 'modal') {
-      return `flex flex-col h-screen w-screen max-h-[90vh] md:max-h-[600px] max-w-[360px] overflow-auto text-black relative bg-v3-modal rounded-lg webkit-scrollbar ${
+      return `flex flex-col h-screen w-screen max-h-[90vh] md:max-h-[600px] max-w-[412px] overflow-auto text-black relative bg-v3-dark webkit-scrollbar ${
         containerClassName || ''
       }`;
     } else if (displayMode === 'integrated' || displayMode === 'widget') {
@@ -139,7 +139,7 @@ const RenderShell = (props: IInit) => {
     <div className={displayClassName}>
       {/* eslint-disable @next/next/no-page-custom-font */}
       <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins&display=swap"
+        href="./styles/globals.css"
         rel="stylesheet"
       ></link>
 
@@ -196,12 +196,12 @@ const RenderWidgetShell = (props: IInit) => {
   return (
     <div className={`fixed ${classes.containerClassName}`}>
       <div
-        className={`${classes.widgetContainerClassName} rounded-full bg-black flex items-center justify-center cursor-pointer`}
+        className={`${classes.widgetContainerClassName} bg-black rounded-full flex items-center justify-center cursor-pointer`}
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? (
           <div
-            className={classNames('text-white fill-current pt-1', {
+            className={classNames('text-v3-light fill-current pt-1', {
               'rotate-180': props.widgetStyle?.position === 'top-left' || props.widgetStyle?.position === 'top-right',
             })}
           >
@@ -216,7 +216,7 @@ const RenderWidgetShell = (props: IInit) => {
         id="integrated-terminal"
         className={`absolute overflow-hidden ${
           classes.contentClassName
-        } flex flex-col w-[90vw] h-[600px] max-w-[384px] max-h-[75vh] rounded-2xl bg-v3-modal transition-opacity duration-300 shadow-2xl ${
+        } flex flex-col w-[90vw] h-[600px] max-w-[412px] max-h-[75vh] bg-v3-dark transition-opacity duration-300 shadow-2xl ${
           !isOpen ? '!h-0 !w-0 opacity-0' : 'opacity-100'
         }`}
       >

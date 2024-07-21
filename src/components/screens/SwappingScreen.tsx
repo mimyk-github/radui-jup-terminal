@@ -121,7 +121,7 @@ const SwappingScreen = () => {
     return (
       <>
         <div className="flex w-full justify-center">
-          <div className="text-white">{swapState === 'loading' ? 'Performing Swap' : ''}</div>
+          <div className="text-v3-light">{swapState === 'loading' ? 'Performing Swap' : ''}</div>
         </div>
 
         <div className="flex w-full justify-center items-center mt-9">
@@ -131,7 +131,7 @@ const SwappingScreen = () => {
         </div>
 
         {txStatus === undefined ? (
-          <span className="text-white text-center mt-8 text-sm px-4">Awaiting approval from your wallet...</span>
+          <span className="text-v3-light text-center mt-8 text-sm px-4">Awaiting approval from your wallet...</span>
         ) : null}
 
         <div className="flex flex-col w-full justify-center items-center px-5 mt-7">
@@ -139,7 +139,7 @@ const SwappingScreen = () => {
             <div className="flex items-center w-full rounded-xl p-4 bg-[#25252D] mb-2">
               <Spinner spinnerColor={'white'} />
 
-              <div className="ml-4 text-white text-sm">
+              <div className="ml-4 text-v3-light text-sm">
                 <span>Swapping</span>
               </div>
             </div>
@@ -182,14 +182,14 @@ const SwappingScreen = () => {
         </div>
 
         <div className="flex flex-col justify-center items-center">
-          <p className="mt-5 text-white text-xl font-semibold">Swap successful</p>
+          <p className="mt-5 text-v3-light text-xl font-semibold">Swap successful</p>
 
           <div className="mt-4 bg-[#25252D] rounded-xl overflow-y-auto w-full webkit-scrollbar py-4 max-h-[260px]">
             <div className="mt-2 flex flex-col items-center justify-center text-center px-4">
-              <p className="text-xs font-semibold text-white/75">
+              <p className="text-xs font-semibold text-v3-light/75">
                 Swapped {fromLamports(inputAmount, fromTokenInfo.decimals)} {fromTokenInfo.symbol} to
               </p>
-              <p className="text-2xl font-semibold text-white/75">
+              <p className="text-2xl font-semibold text-v3-light/75">
                 {fromLamports(outputAmount, toTokenInfo.decimals)} {toTokenInfo.symbol}
               </p>
             </div>
@@ -210,7 +210,7 @@ const SwappingScreen = () => {
             href={explorerLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="cursor-pointer text-white/50 mt-2 ml-2 text-xs hover:underline"
+            className="cursor-pointer text-v3-light/50 mt-2 ml-2 text-xs hover:underline"
           >
             View on {explorer}
           </a>
@@ -240,9 +240,9 @@ const SwappingScreen = () => {
           <div className="flex flex-col items-center justify-center text-center mt-12">
             <ErrorIcon />
 
-            <p className="text-white mt-2">Swap Failed</p>
-            <p className="text-white/50 text-xs mt-2">We were unable to complete the swap, please try again.</p>
-            {errorMessage ? <p className="text-white/50 text-xs mt-2">{errorMessage}</p> : ''}
+            <p className="text-v3-light mt-2">Swap Failed</p>
+            <p className="text-v3-light/50 text-xs mt-2">We were unable to complete the swap, please try again.</p>
+            {errorMessage ? <p className="text-v3-light/50 text-xs mt-2">{errorMessage}</p> : ''}
 
             <JupButton size="lg" className="w-full mt-6 disabled:opacity-50" type="button" onClick={onGoBack}>
               <V2SexyChameleonText>Retry</V2SexyChameleonText>
@@ -256,9 +256,9 @@ const SwappingScreen = () => {
           <div className="flex flex-col items-center justify-center text-center mt-12">
             <ErrorIcon />
 
-            <p className="text-white mt-2">Transaction timed-out</p>
-            <p className="text-white/50 text-xs mt-2">We were unable to complete the swap, please try again.</p>
-            {errorMessage ? <p className="text-white/50 text-xs mt-2">{errorMessage}</p> : ''}
+            <p className="text-v3-light mt-2">Transaction timed-out</p>
+            <p className="text-v3-light/50 text-xs mt-2">We were unable to complete the swap, please try again.</p>
+            {errorMessage ? <p className="text-v3-light/50 text-xs mt-2">{errorMessage}</p> : ''}
 
             <JupButton size="lg" className="w-full mt-6 disabled:opacity-50" type="button" onClick={onGoBack}>
               <V2SexyChameleonText>Retry</V2SexyChameleonText>

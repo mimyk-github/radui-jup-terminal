@@ -87,13 +87,13 @@ const MultiTags: React.FC<IPairRow> = ({ item }) => {
       )}
 
       {isUnknown && (
-        <p className="rounded-md text-xxs leading-none transition-all py-0.5 px-1 bg-black/10 font-semibold text-white/20">
+        <p className="rounded-md text-xxs leading-none transition-all py-0.5 px-1 bg-black/10 font-semibold text-v3-light/20">
           <span>Unknown</span>
         </p>
       )}
 
       {isToken2022 && (
-        <p className="rounded-md text-xxs leading-none transition-all py-0.5 px-1 bg-black/10 font-semibold text-white/20">
+        <p className="rounded-md text-xxs leading-none transition-all py-0.5 px-1 bg-black/10 font-semibold text-v3-light/20">
           <span>Token2022</span>
         </p>
       )}
@@ -101,7 +101,7 @@ const MultiTags: React.FC<IPairRow> = ({ item }) => {
       {remainingTags?.map((tag, idx) => (
         <div
           key={idx}
-          className="rounded-md text-xxs leading-none transition-all py-0.5 px-1 bg-black/10 font-semibold text-white/20"
+          className="rounded-md text-xxs leading-none transition-all py-0.5 px-1 bg-black/10 font-semibold text-v3-light/20"
         >
           {tag}
         </div>
@@ -159,7 +159,7 @@ const FormPairRow = (props: IPairRow) => {
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex space-x-2">
-            <p className="text-sm font-medium text-white truncate">{item.symbol}</p>
+            <p className="text-sm font-medium text-v3-light truncate">{item.symbol}</p>
             {/* Intentionally higher z to be clickable */}
             {showExplorer ? (
               <div className="z-10" onClick={(e) => e.stopPropagation()}>
@@ -167,7 +167,7 @@ const FormPairRow = (props: IPairRow) => {
               </div>
             ) : null}
           </div>
-          <p className="text-xs text-gray-500 dark:text-white-35 truncate">
+          <p className="text-xs text-gray-500 dark:text-v3-light-35 truncate">
             {item.address === WRAPPED_SOL_MINT.toBase58() ? 'Solana' : item.name}
           </p>
         </div>

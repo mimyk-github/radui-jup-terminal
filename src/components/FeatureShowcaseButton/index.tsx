@@ -10,11 +10,11 @@ import TokenIcon from '../TokenIcon';
 import { SOL_TOKEN_INFO } from 'src/misc/constants';
 
 const Title: React.FC<PropsWithChildren> = ({ children }) => (
-  <div className="mt-6 text-white text-md text-center font-semibold">{children}</div>
+  <div className="mt-6 text-v3-light text-md text-center font-semibold">{children}</div>
 );
 
 const Desc: React.FC<PropsWithChildren> = ({ children }) => (
-  <div className="text-white/70 text-sm text-center">{children}</div>
+  <div className="text-v3-light/70 text-sm text-center">{children}</div>
 );
 
 export const FEATURE_SHOWCASE_BUTTON_ID = 'features-showcase-button';
@@ -80,11 +80,11 @@ const FeatureShowcaseButton = () => {
       <p
         id={FEATURE_SHOWCASE_BUTTON_ID}
         onClick={onEnter}
-        className="mt-2 text-white text-sm font-semibold cursor-pointer border border-white/50 hover:bg-white/10 px-2 py-1 rounded-xl"
+        className="mt-2 text-v3-dark text-sm font-semibold cursor-pointer border-v3-dark border-2 hover:bg-white/10 px-2 py-1"
       >{`What's new✨`}</p>
 
       {open && (
-        <div className="fixed w-screen min-h-screen left-0 top-0 z-[60] flex justify-center bg-black/50 text-white overflow-y-scroll">
+        <div className="fixed w-screen min-h-screen left-0 top-0 z-[60] flex justify-center bg-black/50 text-v3-light overflow-y-scroll">
           <div
             ref={containerRef}
             className={classNames(
@@ -93,7 +93,7 @@ const FeatureShowcaseButton = () => {
               slideIn ? '!top-[40px] lg:!top-[12.5%]' : '!top-[300%] !lg:top-[200%]',
             )}
           >
-            <div className="fixed top-4 right-4 text-white fill-current cursor-pointer" onClick={onExit}>
+            <div className="fixed top-4 right-4 text-v3-light fill-current cursor-pointer" onClick={onExit}>
               <CloseIcon />
             </div>
 

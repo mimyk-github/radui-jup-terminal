@@ -171,16 +171,16 @@ const FormConfigurator = ({
   const [isSwapModeOpen, setIsSwapModeOpen] = React.useState(false);
 
   return (
-    <div className="w-full max-w-full border border-white/10 md:border-none md:mx-0 md:max-w-[340px] max-h-[700px] overflow-y-scroll overflow-x-hidden webkit-scrollbar bg-white/5 rounded-xl p-4">
+    <div className="w-full max-w-full md:mx-0 md:max-w-[340px] max-h-[725px] overflow-y-scroll overflow-x-hidden webkit-scrollbar bg-v3-light border-2 border-l-v3-dark p-4 border-y-v3-dark">
       <div className="w-full">
-        <div className="relative inline-block text-left text-white w-full">
-          <p className="text-white text-sm font-semibold">Template</p>
+        <div className="relative inline-block text-left text-v3-dark w-full">
+          <p className="text-v3-dark text-sm font-semibold">Template</p>
 
           <div className="mt-4">
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
-              className="w-full flex justify-between items-center space-x-2 text-left rounded-md bg-white/10 px-4 py-2 text-sm font-medium shadow-sm border border-white/10"
+              className="w-full flex justify-between items-center space-x-2 text-left bg-white/10 px-4 py-2 text-sm font-medium shadow-sm border-2 border-v3-dark"
               id="menu-button"
               aria-expanded="true"
               aria-haspopup="true"
@@ -190,15 +190,15 @@ const FormConfigurator = ({
 
                 <Tooltip
                   variant="dark"
-                  content={<div className="text-white text-xs">{templateOptions[active].description}</div>}
+                  content={<div className="text-v3-dark text-xs">{templateOptions[active].description}</div>}
                 >
-                  <div className="flex items-center text-white-35 fill-current">
+                  <div className="flex items-center text-v3-dark-35 fill-current">
                     <InfoIconSVG width={12} height={12} />
                   </div>
                 </Tooltip>
 
                 {formState?.isDirty ? (
-                  <p className="text-[10px] text-white/50 rounded-xl py-1 px-2 border border-white/50 leading-none">
+                  <p className="text-[10px] text-v3-dark/50 py-1 px-2 border-2 border-white/50 leading-none">
                     Custom
                   </p>
                 ) : null}
@@ -209,7 +209,7 @@ const FormConfigurator = ({
 
             {isOpen ? (
               <div
-                className="absolute left-0 z-10 ml-1 mt-1 origin-top-right rounded-md shadow-xl bg-zinc-700 w-full border border-white/20"
+                className="absolute left-0 z-10 ml-1 mt-1 origin-top-right shadow-xl bg-zinc-700 w-full border-2 border-white/20"
                 role="menu"
                 aria-orientation="vertical"
                 aria-labelledby="menu-button"
@@ -222,7 +222,7 @@ const FormConfigurator = ({
                     className={classNames(
                       'flex items-center w-full px-4 py-2 text-sm hover:bg-white/20 text-left',
                       active === index ? '' : '',
-                      index !== templateOptions.length - 1 ? 'border-b border-white/10' : '',
+                      index !== templateOptions.length - 1 ? 'border-b-2 border-v3-dark' : '',
                     )}
                   >
                     <span>{item.name}</span>
@@ -233,13 +233,13 @@ const FormConfigurator = ({
           </div>
         </div>
       </div>
-      <p className="text-white mt-8 text-sm font-semibold">Things you can configure</p>
+      <p className="text-v3-dark mt-8 text-sm font-semibold">Things you can configure</p>
 
       {/* Fixed input */}
       <div className="flex justify-between mt-5">
         <div>
-          <p className="text-sm text-white/75">Fixed input mint</p>
-          <p className="text-xs text-white/30">Input mint cannot be changed</p>
+          <p className="text-sm text-v3-dark/75">Fixed input mint</p>
+          <p className="text-xs text-v3-dark/30">Input mint cannot be changed</p>
         </div>
         <Toggle
           className="min-w-[40px]"
@@ -247,13 +247,13 @@ const FormConfigurator = ({
           onClick={() => setValue('formProps.fixedInputMint', !formProps.fixedInputMint, { shouldDirty: true })}
         />
       </div>
-      <div className="w-full border-b border-white/10 py-3" />
+      <div className="w-full border-b-2 border-v3-dark py-3" />
 
       {/* Fixed output */}
       <div className="flex justify-between mt-5">
         <div>
-          <p className="text-sm text-white/75">Fixed output mint</p>
-          <p className="text-xs text-white/30">Output mint cannot be changed</p>
+          <p className="text-sm text-v3-dark/75">Fixed output mint</p>
+          <p className="text-xs text-v3-dark/30">Output mint cannot be changed</p>
         </div>
         <Toggle
           className="min-w-[40px]"
@@ -261,12 +261,12 @@ const FormConfigurator = ({
           onClick={() => setValue('formProps.fixedOutputMint', !formProps.fixedOutputMint, { shouldDirty: true })}
         />
       </div>
-      <div className="w-full border-b border-white/10 py-3" />
+      <div className="w-full border-b-2 border-v3-dark py-3" />
 
       {/* Exact out */}
-      <div className="relative inline-block text-left text-white w-full mt-5">
-        <p className="text-white text-sm font-semibold">Exact output mode</p>
-        <div className="text-xs text-white/30">
+      <div className="relative inline-block text-left text-v3-dark w-full mt-5">
+        <p className="text-v3-dark text-sm font-semibold">Exact output mode</p>
+        <div className="text-xs text-v3-dark/30">
           {formProps.swapMode === 'ExactInOrOut' && (
             <span>User can freely switch between ExactIn or ExactOut mode.</span>
           )}
@@ -278,7 +278,7 @@ const FormConfigurator = ({
           <button
             onClick={() => setIsSwapModeOpen((prev) => !prev)}
             type="button"
-            className="w-full flex justify-between items-center space-x-2 text-left rounded-md bg-white/10 px-4 py-2 text-sm font-medium shadow-sm border border-white/10"
+            className="w-full flex justify-between items-center space-x-2 text-left bg-white/10 px-4 py-2 text-sm font-medium shadow-sm border-2 border-v3-dark"
             id="menu-button"
             aria-expanded="true"
             aria-haspopup="true"
@@ -292,7 +292,7 @@ const FormConfigurator = ({
 
           {isSwapModeOpen ? (
             <div
-              className="absolute left-0 top-15 z-10 ml-1 mt-1 origin-top-right rounded-md shadow-xl bg-zinc-700 w-full border border-white/20"
+              className="absolute left-0 top-15 z-10 ml-1 mt-1 origin-top-right shadow-xl bg-zinc-700 w-full border-2 border-white/20"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="menu-button"
@@ -308,7 +308,7 @@ const FormConfigurator = ({
                   className={classNames(
                     'flex items-center w-full px-4 py-2 text-sm hover:bg-white/20 text-left',
                     active === index ? '' : '',
-                    'last:border-b last:border-white/10',
+                    'last:border-b-2 last:border-v3-dark',
                   )}
                 >
                   <span>{item}</span>
@@ -318,13 +318,13 @@ const FormConfigurator = ({
           ) : null}
         </div>
       </div>
-      <div className="w-full border-b border-white/10 py-3" />
+      <div className="w-full border-b-2 border-v3-dark py-3" />
 
       {/* Fixed amount */}
       <div className="flex justify-between mt-5">
         <div>
-          <p className="text-sm text-white/75">Fixed amount</p>
-          <p className="text-xs text-white/30">Depending on Exact In / Exact Out, the amount cannot be changed</p>
+          <p className="text-sm text-v3-dark/75">Fixed amount</p>
+          <p className="text-xs text-v3-dark/30">Depending on Exact In / Exact Out, the amount cannot be changed</p>
         </div>
         <Toggle
           className="min-w-[40px]"
@@ -332,13 +332,13 @@ const FormConfigurator = ({
           onClick={() => setValue('formProps.fixedAmount', !formProps.fixedAmount, { shouldDirty: true })}
         />
       </div>
-      <div className="w-full border-b border-white/10 py-3" />
+      <div className="w-full border-b-2 border-v3-dark py-3" />
 
       {/* Use user slippage */}
       <div className="flex justify-between mt-5">
         <div>
-          <p className="text-sm text-white/75">Use user slippage</p>
-          <p className="text-xs text-white/30">{`Prevent Initial slippage from overriding user's last saved slippage`}</p>
+          <p className="text-sm text-v3-dark/75">Use user slippage</p>
+          <p className="text-xs text-v3-dark/30">{`Prevent Initial slippage from overriding user's last saved slippage`}</p>
         </div>
         <Toggle
           className="min-w-[40px]"
@@ -346,18 +346,18 @@ const FormConfigurator = ({
           onClick={() => setValue('useUserSlippage', !useUserSlippage)}
         />
       </div>
-      <div className="w-full border-b border-white/10 py-3" />
+      <div className="w-full border-b-2 border-v3-dark py-3" />
 
       {/* Initial Slippage */}
       <div className="flex justify-between mt-5">
         <div>
-          <p className="text-sm text-white/75">Initial slippage</p>
-          <p className="text-xs text-white/30">Slippage to be prefilled on first load</p>
+          <p className="text-sm text-v3-dark/75">Initial slippage</p>
+          <p className="text-xs text-v3-dark/30">Slippage to be prefilled on first load</p>
           {useUserSlippage && <p className="text-xs text-warning">Use user slippage is true</p>}
         </div>
       </div>
       <input
-        className="mt-2 text-white w-full flex justify-between items-center space-x-2 text-left rounded-md bg-white/10 px-4 py-2 text-sm font-medium shadow-sm border border-white/10"
+        className="mt-2 text-v3-dark w-full flex justify-between items-center space-x-2 text-left bg-white/10 px-4 py-2 text-sm font-medium shadow-sm border-2 border-v3-dark"
         value={formProps.initialSlippageBps}
         inputMode="numeric"
         maxLength={4}
@@ -369,17 +369,17 @@ const FormConfigurator = ({
           }
         }}
       />
-      <div className="w-full border-b border-white/10 py-3" />
+      <div className="w-full border-b-2 border-v3-dark py-3" />
 
       {/* Initial Amount */}
       <div className="flex justify-between mt-5">
         <div>
-          <p className="text-sm text-white/75">Initial amount</p>
-          <p className="text-xs text-white/30">Amount to be prefilled on first load</p>
+          <p className="text-sm text-v3-dark/75">Initial amount</p>
+          <p className="text-xs text-v3-dark/30">Amount to be prefilled on first load</p>
         </div>
       </div>
       <input
-        className="mt-2 text-white w-full flex justify-between items-center space-x-2 text-left rounded-md bg-white/10 px-4 py-2 text-sm font-medium shadow-sm border border-white/10"
+        className="mt-2 text-v3-dark w-full flex justify-between items-center space-x-2 text-left bg-white/10 px-4 py-2 text-sm font-medium shadow-sm border-2 border-v3-dark"
         value={formProps.initialAmount}
         inputMode="numeric"
         onChange={(e) => {
@@ -390,14 +390,14 @@ const FormConfigurator = ({
           }
         }}
       />
-      <div className="w-full border-b border-white/10 py-3" />
+      <div className="w-full border-b-2 border-v3-dark py-3" />
 
       {/* Wallet passthrough */}
       <div className="flex justify-between mt-5">
         <div>
-          <p className="text-sm text-white/75">Simulate wallet passthrough</p>
-          <p className="text-xs text-white/30">Simulate Terminal with a fake wallet passthrough</p>
-          <p className="text-xs text-white/30">(Testing available on Desktop only)</p>
+          <p className="text-sm text-v3-dark/75">Simulate wallet passthrough</p>
+          <p className="text-xs text-v3-dark/30">Simulate Terminal with a fake wallet passthrough</p>
+          <p className="text-xs text-v3-dark/30">(Testing available on Desktop only)</p>
         </div>
         <Toggle
           className="min-w-[40px]"
@@ -405,13 +405,13 @@ const FormConfigurator = ({
           onClick={() => setValue('simulateWalletPassthrough', !simulateWalletPassthrough)}
         />
       </div>
-      <div className="w-full border-b border-white/10 py-3" />
+      <div className="w-full border-b-2 border-v3-dark py-3" />
 
       {/* Strict Token List  */}
       <div className="flex justify-between mt-5">
         <div>
-          <p className="text-sm text-white/75">Strict Token List</p>
-          <p className="text-xs text-white/30">{`The strict list contains a smaller set of validated tokens. To see all tokens, toggle "off".`}</p>
+          <p className="text-sm text-v3-dark/75">Strict Token List</p>
+          <p className="text-xs text-v3-dark/30">{`The strict list contains a smaller set of validated tokens. To see all tokens, toggle "off".`}</p>
         </div>
         <Toggle
           className="min-w-[40px]"
@@ -419,17 +419,17 @@ const FormConfigurator = ({
           onClick={() => setValue('strictTokenList', !strictTokenList)}
         />
       </div>
-      <div className="w-full border-b border-white/10 py-3" />
+      <div className="w-full border-b-2 border-v3-dark py-3" />
 
       {/* Preferred Explorer  */}
-      <div className="relative inline-block text-left text-white w-full mt-5">
-        <p className="text-white text-sm font-semibold">Preferred Explorer</p>
+      <div className="relative inline-block text-left text-v3-dark w-full mt-5">
+        <p className="text-v3-dark text-sm font-semibold">Preferred Explorer</p>
 
         <div className="mt-4">
           <button
             onClick={() => setIsExplorerDropdownOpen(!isExplorerDropdownOpen)}
             type="button"
-            className="w-full flex justify-between items-center space-x-2 text-left rounded-md bg-white/10 px-4 py-2 text-sm font-medium shadow-sm border border-white/10"
+            className="w-full flex justify-between items-center space-x-2 text-left bg-white/10 px-4 py-2 text-sm font-medium shadow-sm border-2 border-v3-dark"
             id="menu-button"
             aria-expanded="true"
             aria-haspopup="true"
@@ -443,7 +443,7 @@ const FormConfigurator = ({
 
           {isExplorerDropdownOpen ? (
             <div
-              className="absolute left-0 bottom-6 z-10 ml-1 mt-1 origin-top-right rounded-md shadow-xl bg-zinc-700 w-full border border-white/20"
+              className="absolute left-0 bottom-6 z-10 ml-1 mt-1 origin-top-right shadow-xl bg-zinc-700 w-full border-2 border-white/20"
               role="menu"
               aria-orientation="vertical"
               aria-labelledby="menu-button"
@@ -459,7 +459,7 @@ const FormConfigurator = ({
                   className={classNames(
                     'flex items-center w-full px-4 py-2 text-sm hover:bg-white/20 text-left',
                     active === index ? '' : '',
-                    index !== AVAILABLE_EXPLORER.length - 1 ? 'border-b border-white/10' : '',
+                    index !== AVAILABLE_EXPLORER.length - 1 ? 'border-b-2 border-v3-dark' : '',
                   )}
                 >
                   <span>{item.name}</span>

@@ -20,7 +20,7 @@ const SwapSettingButton = ({
   roundBorder,
   children,
 }: ISwapSettingButton) => {
-  const classes = `relative flex-1 py-4 px-1 text-white/50 bg-[#1B1B1E]`;
+  const classes = `relative flex-1 py-4 px-1 text-v3-light/50 bg-[#1B1B1E]`;
   const roundBorderClass = (() => {
     if (roundBorder === 'left') return 'rounded-l-xl';
     if (roundBorder === 'right') return 'rounded-r-xl';

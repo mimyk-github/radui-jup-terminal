@@ -108,7 +108,7 @@ export default function App({ Component, pageProps }: AppProps) {
         }}
       />
 
-      <div className="bg-v3-bg h-screen w-screen max-w-screen overflow-x-hidden flex flex-col justify-between">
+      <div className="bg-v3-light h-screen w-screen max-w-screen overflow-x-hidden flex flex-col justify-between">
         <div>
           <AppHeader />
 
@@ -116,15 +116,15 @@ export default function App({ Component, pageProps }: AppProps) {
             <div className="flex flex-col items-center h-full w-full mt-4 md:mt-14">
               <div className="flex flex-col justify-center items-center text-center">
                 <div className="flex space-x-2">
-                  <V2SexyChameleonText className="text-4xl md:text-[52px] font-semibold px-4 pb-2 md:px-0">
+                  <div className="text-4xl md:text-[52px] font-semibold px-4 pb-2 md:px-0">
                     Jupiter Terminal
-                  </V2SexyChameleonText>
+                  </div>
 
                   <div className="px-1 py-0.5 bg-v3-primary rounded-md ml-2.5 font-semibold flex text-xs self-start">
                     v3
                   </div>
                 </div>
-                <p className="text-[#9D9DA6] max-w-[100%] md:max-w-[60%] text-md mt-4 heading-[24px]">
+                <p className="text-black max-w-[100%] md:max-w-[60%] text-md mt-4 heading-[24px]">
                   An open-sourced, lite version of Jupiter that provides end-to-end swap flow by linking it in your
                   HTML. Check out the visual demo for the various integration modes below.
                 </p>
@@ -134,16 +134,16 @@ export default function App({ Component, pageProps }: AppProps) {
             </div>
 
             <div className="flex justify-center">
-              <div className="max-w-6xl bg-black/25 mt-12 rounded-xl flex flex-col md:flex-row w-full md:p-4 relative">
+              <div className="max-w-6xl bg-v3-dark mt-12 flex flex-col md:flex-row w-full relative">
                 {/* Desktop configurator */}
                 <div className="hidden md:flex">
                   <FormConfigurator {...watchAllFields} reset={reset} setValue={setValue} formState={formState} />
                 </div>
 
                 <ShouldWrapWalletProvider>
-                  <div className="mt-8 md:mt-0 md:ml-4 h-full w-full bg-black/40 rounded-xl flex flex-col">
+                  <div className="mt-8 md:mt-0 md:ml-4 h-full w-full bg-[#0f0e0c] rounded-xl flex flex-col">
                     {watchAllFields.simulateWalletPassthrough ? (
-                      <div className="absolute right-6 top-8 text-white flex flex-col justify-center text-center">
+                      <div className="absolute right-6 top-8 text-v3-light flex flex-col justify-center text-center">
                         <div className="text-xs mb-1">Simulate dApp Wallet</div>
                         <UnifiedWalletButton />
                       </div>
@@ -160,12 +160,12 @@ export default function App({ Component, pageProps }: AppProps) {
                           tab === 'modal' ? '' : 'opacity-20 hover:opacity-70',
                         )}
                       >
-                        <div className="flex items-center text-md text-white">
-                          {tab === 'modal' ? <V2SexyChameleonText>Modal</V2SexyChameleonText> : 'Modal'}
+                        <div className="flex items-center text-md text-v3-light">
+                          {tab === 'modal' ? <div className='text-v3-primary'>Modal</div> : 'Modal'}
                         </div>
 
                         {tab === 'modal' ? (
-                          <div className="absolute left-0 bottom-[-8px] w-full h-0.5 bg-gradient-to-r from-v3-primary to-[#00BEF0]" />
+                          <div className="absolute left-0 bottom-[-8px] w-full h-0.5 bg-v3-primary]" />
                         ) : (
                           <div className="absolute left-0 bottom-[-8px] w-full h-[1px] bg-white/50" />
                         )}
@@ -181,11 +181,11 @@ export default function App({ Component, pageProps }: AppProps) {
                           tab === 'integrated' ? '' : 'opacity-20 hover:opacity-70',
                         )}
                       >
-                        <div className="flex items-center text-md text-white">
-                          {tab === 'integrated' ? <V2SexyChameleonText>Integrated</V2SexyChameleonText> : 'Integrated'}
+                        <div className="flex items-center text-md text-v3-light">
+                          {tab === 'integrated' ? <div className='text-v3-primary'>Integrated</div> : 'Integrated'}
                         </div>
                         {tab === 'integrated' ? (
-                          <div className="absolute left-0 bottom-[-8px] w-full h-0.5 bg-gradient-to-r from-v3-primary to-[#00BEF0]" />
+                          <div className="absolute left-0 bottom-[-8px] w-full h-0.5  bg-v3-primary " />
                         ) : (
                           <div className="absolute left-0 bottom-[-8px] w-full h-[1px] bg-white/50" />
                         )}
@@ -201,12 +201,12 @@ export default function App({ Component, pageProps }: AppProps) {
                           tab === 'widget' ? '' : 'opacity-20 hover:opacity-70',
                         )}
                       >
-                        <div className="flex items-center text-md text-white">
-                          {tab === 'widget' ? <V2SexyChameleonText>Widget</V2SexyChameleonText> : 'Widget'}
+                        <div className="flex items-center text-md text-v3-light">
+                          {tab === 'widget' ? <div className='text-v3-primary'>Widget</div> : 'Widget'}
                         </div>
 
                         {tab === 'widget' ? (
-                          <div className="absolute left-0 bottom-[-8px] w-full h-0.5 bg-gradient-to-r from-v3-primary to-[#00BEF0]" />
+                          <div className="absolute left-0 bottom-[-8px] w-full h-0.5 bg-v3-primary" />
                         ) : (
                           <div className="absolute left-0 bottom-[-8px] w-full h-[1px] bg-white/50" />
                         )}
@@ -221,7 +221,7 @@ export default function App({ Component, pageProps }: AppProps) {
                         : null}
                     </span>
 
-                    <div className="flex flex-grow items-center justify-center text-white/75">
+                    <div className="flex flex-grow items-center justify-center text-v3-light/75">
                       {tab === 'modal' ? (
                         <ModalTerminal
                           rpcUrl={rpcUrl}

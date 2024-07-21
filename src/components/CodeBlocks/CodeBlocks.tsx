@@ -131,8 +131,8 @@ const CodeBlocks = ({
   return (
     <div className="flex flex-col items-center justify-center mt-12">
       <div className="relative w-full max-w-full lg:max-w-[80%] xl:max-w-[70%] overflow-hidden px-4 md:px-0">
-        <p className="text-white self-start pb-2 font-semibold">Setup HTML</p>
-        <p className="text-white self-start pb-2 text-xs text-white/50">
+        <p className="text-v3-dark self-start pb-2 font-semibold">Setup HTML</p>
+        <p className="text-v3-dark self-start pb-2 text-xs">
           Terminal is designed to work anywhere the web runs, including React, Plain HTML/JS, and many other frameworks.
         </p>
 
@@ -144,12 +144,12 @@ const CodeBlocks = ({
       <div className="my-4" />
 
       <div className="relative w-full max-w-full lg:max-w-[80%] xl:max-w-[70%] overflow-hidden px-4 md:px-0">
-        <p className="text-white self-start pb-2 font-semibold">Code snippet</p>
+        <p className="text-v3-dark self-start pb-2 font-semibold">Code snippet</p>
 
         <div className="absolute flex space-x-2 top-0 right-4 md:right-2 ">
           <button
             className={classNames(
-              'text-xs text-white border rounded-xl px-2 py-1 opacity-50 hover:opacity-100',
+              'text-xs text-v3-dark border rounded-xl px-2 py-1 opacity-80 hover:opacity-100',
               isCopied ? 'opacity-100 cursor-wait' : '',
             )}
             onClick={copyToClipboard}
@@ -159,7 +159,7 @@ const CodeBlocks = ({
 
           <button
             className={classNames(
-              'text-xs text-white border rounded-xl px-2 py-1 opacity-50 hover:opacity-100',
+              'text-xs text-v3-dark border rounded-xl px-2 py-1 opacity-80 hover:opacity-100',
               isCopiedShareLink ? 'opacity-100 cursor-wait' : '',
             )}
             onClick={copyShareLink}
@@ -177,7 +177,7 @@ const CodeBlocks = ({
             target="_blank"
             rel={'noopener noreferrer'}
             href={'https://github.com/jup-ag/terminal/tree/main/src/content'}
-            className="mt-2 flex items-center justify-center space-x-1 text-sm text-white/50 hover:underline"
+            className="mt-2 flex items-center justify-center space-x-1 text-sm text-v3-light/50 hover:underline"
           >
             <p>Open Example directory</p>
             <ExternalIcon />
@@ -186,7 +186,7 @@ const CodeBlocks = ({
             target="_blank"
             rel={'noopener noreferrer'}
             href={'https://github.com/jup-ag/terminal/blob/main/src/types/index.d.ts'}
-            className="mt-2 flex items-center justify-center space-x-1 text-sm text-white/50 hover:underline"
+            className="mt-2 flex items-center justify-center space-x-1 text-sm text-v3-light/50 hover:underline"
           >
             <p>Show fully typed API</p>
             <ExternalIcon />

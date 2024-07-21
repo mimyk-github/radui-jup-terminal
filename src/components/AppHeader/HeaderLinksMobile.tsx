@@ -22,7 +22,7 @@ const HeaderLink: React.FC<{
           }
         : {})}
     >
-      <span className="flex items-center justify-center h-9 w-9 rounded-full text-white/50 fill-current bg-black/25">
+      <span className="flex items-center justify-center h-9 w-9 rounded-full text-v3-dark fill-current bg-black/25">
         {icon}
       </span>
       <p className="ml-5 font-medium">{label}</p>
@@ -32,7 +32,7 @@ const HeaderLink: React.FC<{
 
 const HeaderLinksMobile: React.FC = () => {
   return (
-    <div className="px-5 py-4 text-base text-white space-y-2">
+    <div className="px-5 py-4 text-base text-v3-dark space-y-2  border-r-2 border-v3-dark">
       <HeaderLink href="/" label={'Demo'} icon={<SwapIcon width="20" height="20" />} />
       <HeaderLink
         href="https://github.com/jup-ag/terminal"

@@ -28,7 +28,7 @@ const Content = () => {
   const [isMessageClosed, setIsMessageClosed] = useState(false);
 
   return (
-    <div className="relative h-full">
+    <div className="relative h-full border-2 border-v3-primary">
       {screen === 'Initial' ? (
         <>
           <Header setIsWalletModalOpen={setIsWalletModalOpen} />
@@ -41,7 +41,7 @@ const Content = () => {
 
       {!isMessageClosed && message ? (
         <div className="absolute bottom-1 px-3 py-2 w-full">
-          <div className=" bg-[#FBA43A] rounded-xl flex items-center justify-between px-3 py-2">
+          <div className=" bg-[#FBA43A] flex items-center justify-between px-3 py-2">
             <div className="pr-2">{message}</div>
             <div className="cursor-pointer" onClick={() => setIsMessageClosed(true)}>
               <CloseIcon width={12} height={12} />
