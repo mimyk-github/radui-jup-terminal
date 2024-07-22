@@ -3,7 +3,8 @@
 
 #jupiter-terminal * {
   box-sizing: border-box;
-  font-family: 'Joystix', sans-serif;
+  font-family: 'Joystix', sans-serif !important;
+  border-color: #FDE185
 }
 
 #jupiter-terminal *:focus {
@@ -77,13 +78,13 @@
 
 @font-face {
   font-family: 'Joystix';
-  src: url('../joystix\ monospace.otf') format('truetype');
+  src: url('/joystix monospace.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 html {
-  font-family: 'Joystix', sans-serif;
+  font-family: 'Joystix', sans-serif !important;
 }
 
 ::placeholder {

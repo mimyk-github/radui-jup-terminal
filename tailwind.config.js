@@ -31,7 +31,7 @@ module.exports = {
         xxs: ['0.625rem', '1rem'],
       },
       backgroundImage: {
-        'v3-text-gradient': 'linear-gradient(247.44deg, #C7F284 13.88%, #00BEF0 99.28%)',
+        'v3-text-gradient': 'linear-gradient(247.44deg, #FDE185 13.88%, #00BEF0 99.28%)',
       },
       keyframes: {
         shine: {
