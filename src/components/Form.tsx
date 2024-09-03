@@ -178,14 +178,14 @@ const Form: React.FC<{
               <div>
                 <div
                   className={classNames(
-                    'py-5 px-4 flex flex-col dark:text-v3-light border-b-2 border-v3-primary box-content',
-                    'group focus-within:border-v3-primary/100 focus-within:shadow-swap-input-dark',
+                    'py-5 px-4 flex flex-col dark:text-v3-light border-b-2 border-v3-dark box-content',
+                    'group focus-within:border-v3-dark/100 focus-within:shadow-swap-input-dark',
                   )}
                 >
                   <div className="flex justify-between items-center">
                     <button
                       type="button"
-                      className="py-2 px-3 flex items-center bg-v3-dark border-2 border-v3-primary hover:bg-v3-light/10 text-v3-primary"
+                      className="py-2 px-3 flex items-center bg-v3-light border-2 border-v3-dark hover:bg-v3-light/10 text-v3-dark"
                       disabled={fixedInputMint}
                       onClick={onClickSelectFromMint}
                     >
@@ -196,13 +196,13 @@ const Form: React.FC<{
                         {fromTokenInfo?.symbol}
                       </div>
                       {fixedInputMint ? null : (
-                        <span className="text-v3-primary fill-current">
+                        <span className="text-v3-dark fill-current">
                           <ChevronDownIcon />
                         </span>
                       )}
                     </button>
 
-                    <div className="ml-4 h-10 text-right border-v3-primary/60 border-b-2">
+                    <div className="ml-4 h-10 text-right border-v3-dark/60 border-b-2">
                       <NumericFormat
                         disabled={fixedAmount || swapMode === 'ExactOut'}
                         value={typeof form.fromValue === 'undefined' ? '' : form.fromValue}
@@ -213,7 +213,7 @@ const Form: React.FC<{
                         onValueChange={onChangeFromValue}
                         placeholder={'0.00'}
                         className={classNames(
-                          'h-full w-full bg-transparent text-v3-light text-right font-semibold text-lg',
+                          'h-full w-full bg-transparent text-v3-dark text-right font-semibold text-lg',
                           { 'cursor-not-allowed': inputAmountDisabled },
                         )}
                         decimalSeparator={detectedSeparator}
@@ -228,7 +228,7 @@ const Form: React.FC<{
                   {fromTokenInfo?.address ? (
                     <div className="flex justify-between items-center">
                       <div
-                        className={classNames('flex mt-3 space-x-1 text-xs items-center text-v3-primary/30 fill-current', {
+                        className={classNames('flex mt-3 space-x-1 text-xs items-center text-v3-dark/50 fill-current', {
                           'cursor-pointer': swapMode !== 'ExactOut',
                         })}
                         onClick={(e) => {
@@ -267,14 +267,14 @@ const Form: React.FC<{
               <div>
                 <div
                   className={classNames(
-                    'py-5 px-4 flex flex-col dark:text-v3-light border-b-2 border-t-2 border-v3-primary box-content',
-                    'group focus-within:border-v3-primary/100 focus-within:shadow-swap-input-dark',
+                    'py-5 px-4 flex flex-col dark:text-v3-light border-b-2 border-t-2 border-v3-dark box-content',
+                    'group focus-within:border-v3-dark/100 focus-within:shadow-swap-input-dark',
                   )}
                 >
                   <div className="flex justify-between items-center">
                     <button
                       type="button"
-                      className="py-2 px-3 flex items-center bg-v3-dark border-2 border-v3-primary hover:bg-v3-light/10 text-v3-primary"
+                      className="py-2 px-3 flex items-center bg-v3-light border-2 border-v3-dark hover:bg-v3-light/10 text-v3-dark"
                       disabled={fixedOutputMint}
                       onClick={onClickSelectToMint}
                     >
@@ -286,13 +286,13 @@ const Form: React.FC<{
                       </div>
 
                       {fixedOutputMint ? null : (
-                        <span className="text-v3-light/25 fill-current">
+                        <span className="text-v3-dark fill-current">
                           <ChevronDownIcon />
                         </span>
                       )}
                     </button>
 
-                    <div className="ml-4 h-9 text-right border-v3-primary/60 border-b-2">
+                    <div className="ml-4 h-9 text-right border-v3-dark/60 border-b-2">
                       <NumericFormat
                         disabled={!swapMode || swapMode === 'ExactIn'}
                         value={typeof form.toValue === 'undefined' ? '' : form.toValue}
@@ -303,7 +303,7 @@ const Form: React.FC<{
                         onValueChange={onChangeToValue}
                         placeholder={swapMode === 'ExactIn' ? '' : 'Enter desired amount'}
                         className={classNames(
-                          'h-full w-full bg-transparent text-v3-light text-right font-semibold  placeholder:text-sm placeholder:font-normal placeholder:text-v2-lily/20 text-lg',
+                          'h-full w-full bg-transparent text-v3-dark/50 text-right font-semibold  placeholder:text-sm placeholder:font-normal placeholder:text-v3-dark/50 text-lg',
                         )}
                         decimalSeparator={detectedSeparator}
                         isAllowed={withValueLimit}
@@ -325,7 +325,7 @@ const Form: React.FC<{
 
                   {toTokenInfo?.address ? (
                     <div className="flex justify-between items-center">
-                      <div className="flex mt-3 space-x-1 text-xs items-center text-v3-primary/30 fill-current">
+                      <div className="flex mt-3 space-x-1 text-xs items-center text-v3-dark/50 fill-current">
                         <WalletIcon width={10} height={10} />
                         <CoinBalance mintAddress={toTokenInfo.address} />
                         <span>{toTokenInfo.symbol}</span>

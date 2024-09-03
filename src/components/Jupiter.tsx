@@ -28,7 +28,7 @@ const Content = () => {
   const [isMessageClosed, setIsMessageClosed] = useState(false);
 
   return (
-    <div className="relative h-full border-2 border-v3-primary">
+    <div className="relative h-full border-2 border-v3-dark">
       {screen === 'Initial' ? (
         <>
           <Header setIsWalletModalOpen={setIsWalletModalOpen} />

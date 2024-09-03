@@ -4,7 +4,6 @@
 #jupiter-terminal * {
   box-sizing: border-box;
   font-family: 'Joystix', sans-serif !important;
-  border-color: #FDE185
 }
 
 #jupiter-terminal *:focus {

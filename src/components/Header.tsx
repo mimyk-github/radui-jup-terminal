@@ -26,17 +26,17 @@ const Header: React.FC<{ setIsWalletModalOpen(toggle: boolean): void }> = ({ set
   }, [form.slippageBps]);
 
   return (
-    <div className=" h-12 border-v3-primary border-b-2">
-      <div className="pl-2 w-full flex items-center justify-between ">
-        <a href={jupiterDirectLink} target={'_blank'} rel="noreferrer noopener" className="flex items-center space-x-2">
-          <JupiterLogo width={24} height={24} />
-          <span className="font-bold text-sm text-v3-primary">Jupiter</span>
-        </a>
+    <div className=" h-12 border-v3-dark border-b-2">
+      <div className="pl-2 flex items-center justify-between ">
+        <a href={jupiterDirectLink} target={'_blank'} rel="noreferrer noopener" className="px-2 flex items-center space-x-2">
+          {/* <JupiterLogo width={24} height={24} /> */}
+            <span className="font-bold text-xs text-center text-v3-dark">Made With Jupiter</span>
+          </a>
 
         <div className="flex items-center">
           <button
             type="button"
-            className="h-12 w-10 flex items-center justify-center border-v3-primary border-r-2 border-l-2 text-v3-primary fill-current"
+            className="h-12 w-10 flex items-center justify-center border-v3-dark border-r-2 border-l-2 text-v3-dark fill-current"
             onClick={refresh}
           >
             <RefreshSVG />
@@ -44,7 +44,7 @@ const Header: React.FC<{ setIsWalletModalOpen(toggle: boolean): void }> = ({ set
 
           <button
             type="button"
-            className="px-2 h-12 flex items-center justify-center border-v3-primary border-r-2 text-v3-primary fill-current"
+            className="px-2 h-12 flex items-center justify-center border-v3-dark border-r-2 text-v3-dark fill-current"
             onClick={() => setShowSlippageSetting(true)}
           >
             <SettingsSVG />

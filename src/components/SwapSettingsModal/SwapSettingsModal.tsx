@@ -451,7 +451,7 @@ const SwapSettingsModal: React.FC<{ closeModal: () => void }> = ({ closeModal })
                 }}
                 className={classNames(
                   `flex items-center justify-between cursor-text w-[120px] !h-[42px] text-v3-light/50 bg-[#1B1B1E] pl-2 text-sm relative`,
-                  inputFocused.current ? 'border border-v3-primary rounded-r-xl' : '',
+                  inputFocused.current ? 'border border-v3-dark rounded-r-xl' : '',
                 )}
               >
                 <span className="text-xs">

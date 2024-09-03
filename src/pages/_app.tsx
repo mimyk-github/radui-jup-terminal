@@ -141,7 +141,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 </div>
 
                 <ShouldWrapWalletProvider>
-                  <div className="mt-8 md:mt-0 md:ml-4 h-full w-full bg-[#0f0e0c] rounded-xl flex flex-col">
+                  <div className="mt-8 md:mt-0 md:ml-4 h-full w-full bg-v3-light flex flex-col border-2 border-v3-dark">
                     {watchAllFields.simulateWalletPassthrough ? (
                       <div className="absolute right-6 top-8 text-v3-light flex flex-col justify-center text-center">
                         <div className="text-xs mb-1">Simulate dApp Wallet</div>
@@ -160,8 +160,8 @@ export default function App({ Component, pageProps }: AppProps) {
                           tab === 'modal' ? '' : 'opacity-20 hover:opacity-70',
                         )}
                       >
-                        <div className="flex items-center text-md text-v3-light">
-                          {tab === 'modal' ? <div className='text-v3-primary'>Modal</div> : 'Modal'}
+                        <div className="flex items-center text-md text-v3-dark">
+                          {tab === 'modal' ? <div className='text-v3-dark'>Modal</div> : 'Modal'}
                         </div>
 
                         {tab === 'modal' ? (
@@ -181,8 +181,8 @@ export default function App({ Component, pageProps }: AppProps) {
                           tab === 'integrated' ? '' : 'opacity-20 hover:opacity-70',
                         )}
                       >
-                        <div className="flex items-center text-md text-v3-light">
-                          {tab === 'integrated' ? <div className='text-v3-primary'>Integrated</div> : 'Integrated'}
+                        <div className="flex items-center text-md text-v3-dark">
+                          {tab === 'integrated' ? <div className='text-v3-dark'>Integrated</div> : 'Integrated'}
                         </div>
                         {tab === 'integrated' ? (
                           <div className="absolute left-0 bottom-[-8px] w-full h-0.5  bg-v3-primary " />
@@ -201,8 +201,8 @@ export default function App({ Component, pageProps }: AppProps) {
                           tab === 'widget' ? '' : 'opacity-20 hover:opacity-70',
                         )}
                       >
-                        <div className="flex items-center text-md text-v3-light">
-                          {tab === 'widget' ? <div className='text-v3-primary'>Widget</div> : 'Widget'}
+                        <div className="flex items-center text-md text-v3-dark">
+                          {tab === 'widget' ? <div className='text-v3-dark'>Widget</div> : 'Widget'}
                         </div>
 
                         {tab === 'widget' ? (

@@ -121,7 +121,7 @@ const RenderShell = (props: IInit) => {
   const contentClassName = useMemo(() => {
     // Default Modal
     if (!displayMode || displayMode === 'modal') {
-      return `flex flex-col h-screen w-screen max-h-[90vh] md:max-h-[600px] max-w-[412px] overflow-auto text-black relative bg-v3-dark webkit-scrollbar ${
+      return `flex flex-col h-screen w-screen max-h-[90vh] md:max-h-[600px] max-w-[466px] overflow-auto text-black relative bg-v3-light webkit-scrollbar ${
         containerClassName || ''
       }`;
     } else if (displayMode === 'integrated' || displayMode === 'widget') {
@@ -216,7 +216,7 @@ const RenderWidgetShell = (props: IInit) => {
         id="integrated-terminal"
         className={`absolute overflow-hidden ${
           classes.contentClassName
-        } flex flex-col w-[90vw] h-[600px] max-w-[412px] max-h-[75vh] bg-v3-dark transition-opacity duration-300 shadow-2xl ${
+        } flex flex-col w-[90vw] h-[600px] max-w-[466px] max-h-[75vh] bg-v3-light transition-opacity duration-300 shadow-2xl ${
           !isOpen ? '!h-0 !w-0 opacity-0' : 'opacity-100'
         }`}
       >

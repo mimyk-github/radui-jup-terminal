@@ -108,13 +108,13 @@ const MultiTags: React.FC<IPairRow> = ({ item }) => {
       ))}
 
       {isLST && (
-        <p className="rounded-md text-xxs leading-none transition-all py-0.5 px-1 text-v3-primary/50 border border-v3-primary/50 font-semibold">
+        <p className="rounded-md text-xxs leading-none transition-all py-0.5 px-1 text-v3-primary/50 border border-v3-dark/50 font-semibold">
           <span>LST</span>
         </p>
       )}
 
       {isVerified && (
-        <p className="rounded-md text-xxs leading-none transition-all py-0.5 px-1 text-v3-primary/50 border border-v3-primary/50 font-semibold">
+        <p className="rounded-md text-xxs leading-none transition-all py-0.5 px-1 text-v3-primary/50 border border-v3-dark/50 font-semibold">
           {/* We're renaming verified to stict for now, requested by Mei */}
           <span>Community</span>
         </p>
